@@ -13,7 +13,7 @@ public class Library {
         this.books.add(book);
     }
 
-    public void SearchBook(String author){
+    public  Book SearchBook(String author){
         Book searchedBook = null;
 
         for (Book book:
@@ -22,12 +22,10 @@ public class Library {
                 searchedBook = book;
             }
         }
-        if (searchedBook == null){
-            throw new InvalidDnDOperationException("Invalid author!");
-        }
 
 
-        PrintBookInformation(searchedBook);
+
+        return searchedBook;
     }
 
     public int GetCount() {
@@ -35,13 +33,20 @@ public class Library {
     }
 
     public void DeleteBook(String authorName){
-        for (Book book:
-             books) {
-            if (book.getAuthor() == authorName){
-                books.remove(book);
-            }
+        Book bookToDelete = null;
+        for(Book book:books){
+            if(book.getAuthor().equals(authorName))
+                bookToDelete = book;
         }
+
+        if(bookToDelete==null)
+            System.out.println("No customer found");
+        else
+            books.remove(bookToDelete);
     }
+
+
+
 
     private void PrintBookInformation(Book book){
         StringBuilder information = new StringBuilder();
@@ -55,6 +60,11 @@ public class Library {
         information.append("Year of publishing: " + book.getYearOfPublishing()+'.');
         information.append(System.getProperty("line.separator"));
         information.append("Book ISBN number: " + book.getISBN() +'.');
+        information.append(System.getProperty("line.separator"));
+        information.append("-----------------------------------------");
+
+        System.out.println(information);
+
 
     }
 

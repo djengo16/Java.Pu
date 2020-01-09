@@ -15,9 +15,9 @@ public class TestBook {
         library.AddBook(thirdBook);
 
         library.PrintAllBooks();
-
-        library.DeleteBook("Stephen King");
-
+        while(library.SearchBook("Stephen King") != null) {
+            library.DeleteBook("Stephen King");
+        }
         library.PrintAllBooks();
 
     }
