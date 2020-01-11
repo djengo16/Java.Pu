@@ -40,7 +40,7 @@ public class Library {
         }
 
         if(bookToDelete==null)
-            System.out.println("No customer found");
+            System.out.println("No book found");
         else
             books.remove(bookToDelete);
     }
