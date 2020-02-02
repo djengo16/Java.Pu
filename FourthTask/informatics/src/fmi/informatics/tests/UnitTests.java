@@ -1,8 +1,15 @@
 package fmi.informatics.tests;
 
+import fmi.informatics.events.events.hw.Party;
+import fmi.informatics.events.events.hw.Teenager;
 import fmi.informatics.extending.Person;
 import fmi.informatics.extending.Professor;
 import fmi.informatics.extending.Student;
+
+
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class UnitTests  {
     public void testGenderChecker(){
@@ -19,7 +26,7 @@ public class UnitTests  {
 
     }
 
-    public void testProfessorGenerator(){
+    public static void testProfessorGenerator(){
         Person person =  Professor.ProfessorGenerator.make();
         if(person != null){
             System.out.println("Professor generator method works fine!");
@@ -29,7 +36,7 @@ public class UnitTests  {
         }
     }
 
-    public void testStudentGenerator(){
+    public static void testStudentGenerator(){
         Person student = Student.StudentGenerator.make();
         if(student != null){
             System.out.println("Student generator method works fine!");
@@ -39,7 +46,32 @@ public class UnitTests  {
         }
     }
 
+    public static void testPartyAddMethod(){
+
+         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+        Teenager teen1 = new Teenager("Ivan");
+        Teenager teen2 = new Teenager("Stefan");
+
+        Party party = new Party();
+
+        party.addPerson(teen1);
+        party.addPerson(teen2);
+
+        if (assertInt(2,party.getSIze())){
+            System.out.println("addPerson method works correctly");
+        }
+        else{
+            System.out.println("addPerson method workds incorrectly");
+        }
+
+
+    }
+
     public static boolean assertChar(char expected,char result){
+        return expected == result;
+    }
+    public static boolean assertInt(int expected,int result){
         return expected == result;
     }
 

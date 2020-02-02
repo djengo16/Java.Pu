@@ -20,6 +20,10 @@ public class Party implements Celebratable {
         greetBack(teenager);
     }
 
+    public int getSIze(){
+        return this.people.size();
+    }
+
     public void greetBack(Celebrator celebrator){
         for (Teenager c:
              people) {
