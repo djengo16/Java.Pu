@@ -46,9 +46,9 @@ public class UnitTests  {
         }
     }
 
-    public static void testPartyAddMethod(){
+    public static void testAddMethodInPartyClass(){
 
-         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
 
         Teenager teen1 = new Teenager("Ivan");
         Teenager teen2 = new Teenager("Stefan");
