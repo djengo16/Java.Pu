@@ -16,6 +16,7 @@ import fmi.informatics.comparators.WeightComparator;
 import fmi.informatics.extending.Person;
 import fmi.informatics.extending.Professor;
 import fmi.informatics.extending.Student;
+import fmi.informatics.tests.UnitTest;
 
 // създаваме клас PersonDataGUI
 public class PersonDataGUI {
@@ -58,7 +59,7 @@ public class PersonDataGUI {
 		// Добавяме бутон за сортиране по години с Comparable interface
 		JButton buttonSortAge = new JButton("Сортирай по години");
 
-		// Добавяме бутон за сортиране
+		// Добавяме бутони за сортиране
 		JButton buttonSortAscending = new JButton("Сортирай по възходящ ред");
 		JButton buttonSortDescending = new JButton("Сортирай по низходящ ред");
 
@@ -83,7 +84,10 @@ public class PersonDataGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Arrays.sort(people);
+				UnitTest.TestAscendingSortPeopleByAge(Arrays.asList(people));
+
 				table.repaint();
+
 			}
 		});
 		
@@ -94,6 +98,7 @@ public class PersonDataGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sortDialogAscending.pack();
+
 				sortDialogAscending.setVisible(true);
 			}
 		});
