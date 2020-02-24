@@ -15,7 +15,7 @@ class StudentDataGuiTest extends GroovyTestCase {
 
         studentsAsList = Arrays.asList(students);
 
-        assertArrayEquals(1,studentsAsList.size());
-        assertArrayEquals("Petrov",studentsAsList[0].lastName);
+        assertEquals(1,studentsAsList.size());
+        assertEquals("Petrov",studentsAsList[0].lastName);
     }
 }
