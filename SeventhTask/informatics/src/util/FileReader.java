@@ -20,7 +20,7 @@ public class FileReader {
 
     private static final String PERSON_FILE_EXTENSION = ".file";
     private static final String PERSON_FILE_NAME = "students";
-    private static final String FILE_PATH = "src/files/";
+    private static final String FILE_PATH = "src/util/files/";
     private static final String FULL_PATH = FILE_PATH + PERSON_FILE_NAME + PERSON_FILE_EXTENSION;
 
     private static ArrayList<Student> studentsList = new ArrayList<>();
