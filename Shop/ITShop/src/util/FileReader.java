@@ -23,7 +23,7 @@ public class FileReader {
 
     private static final String PERSON_FILE_EXTENSION = ".file";
     private static final String PERSON_FILE_NAME = "products";
-    private static final String FILE_PATH = "D:/Java/Нова папка/ITShop/ITshop/src/files/";
+    private static final String FILE_PATH = "D:/Java/Java.Projects.Homeworks/Java.Pu/Shop/ITShop/src/files/";
     private static final String FULL_PATH = FILE_PATH + PERSON_FILE_NAME + PERSON_FILE_EXTENSION;
 
     private static ArrayList<Product> products = new ArrayList<>();

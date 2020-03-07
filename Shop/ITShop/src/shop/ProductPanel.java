@@ -27,7 +27,7 @@ public class ProductPanel {
 
             BufferedImage tmp = null;
             try {
-                tmp = ImageIO.read(new File("D:/Java/Java.Projects.Homeworks/Java.Pu/Shop/ITShop"
+                tmp = ImageIO.read(new File("D:/Java/Java.Projects.Homeworks/Java.Pu/Shop/ITShop/"
                         + product.getImg_path()));
 
             } catch (IOException e1) {
