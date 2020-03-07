@@ -66,7 +66,7 @@ public class Shop {
 		//---------------------------------------
 		final String PERSON_FILE_EXTENSION = ".file";
 		final String PERSON_FILE_NAME = "shopdata";
-		final String FILE_PATH = "D:/Java/Нова папка/ITShop/ITshop/src/files/";
+		final String FILE_PATH = "D:/Java/Java.Projects.Homeworks/Java.Pu/Shop/ITShop"
 		final String FULL_PATH = FILE_PATH + PERSON_FILE_NAME + PERSON_FILE_EXTENSION;
 
 
